@@ -10,7 +10,9 @@ public class Pessoa {
 	}
 	
 	void comer(Comida comida) {
-		this.peso += comida.peso;
-		System.out.printf("Você comeu %s que pesa %.2f logo seu peso foi para %.2f.\n", comida.nome, comida.peso, peso);
+		if(comida != null) {
+			this.peso += comida.peso;
+			System.out.printf("Você comeu %s que pesa %.2f logo seu peso foi para %.2f.\n", comida.nome, comida.peso, peso);
+		}
 	}
 }
